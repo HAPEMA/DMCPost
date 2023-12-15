@@ -101,7 +101,7 @@
 
     <div class="titulo">
          
-                    <h1>Inicio de sesión</h1>
+                    <h1>Inicio de sesión:</h1>
                 </div>
 
     <div id="formContainer">
