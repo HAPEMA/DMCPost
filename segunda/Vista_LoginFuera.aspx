@@ -94,7 +94,7 @@
 
     <header>
         <div id="logoContainer">
-            <img src="IMG/Logo_dmc.png" alt="Logo" />
+            <img src="IMG/Logo_dmc.png" alt="LogoDMC" />
         </div>
        
     </header>
