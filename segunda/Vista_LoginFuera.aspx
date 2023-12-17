@@ -116,7 +116,8 @@
 <asp:Button ID="BtnLogin" runat="server" Text="Iniciar Sesión" OnClick="BtnLogin_Click" OnClientClick="return validateFields();" />
 
         <asp:Label ID="Mensaje" runat="server"></asp:Label>
-        
+        <asp:Label ID="lblMensaje" runat="server" Text="" ForeColor="Red"></asp:Label>
+
              <script type="text/javascript">
     function validateFields() {
         var usuario = document.getElementById('<%=txtUsuario.ClientID%>').value.trim();

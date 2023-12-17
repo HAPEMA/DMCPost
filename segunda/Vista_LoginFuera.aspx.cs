@@ -14,12 +14,20 @@ namespace segunda
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblMensaje.Text = "";
         }
+
         protected void BtnLogin_Click(object sender, EventArgs e)
         {
             string Usuario = txtUsuario.Text.Trim();
             string Contrasena = txtContrasena.Text.Trim();
+
+            // Verificar si se ingresaron ambos campos
+            if (string.IsNullOrEmpty(Usuario) || string.IsNullOrEmpty(Contrasena))
+            {
+                lblMensaje.Text = "Por favor, complete ambos campos.";
+                return; // Detener el proceso si falta información
+            }
 
             bool UsuarioValido = ValidateCredentials(Usuario, Contrasena);
             if (UsuarioValido)
@@ -30,7 +38,7 @@ namespace segunda
             else
             {
                 // Muestra un mensaje de error si las credenciales son incorrectas
-                Response.Write("Nombre de usuario o contraseña incorrectos");
+                lblMensaje.Text = "Nombre de usuario o contraseña incorrectos";
             }
         }
 
@@ -47,7 +55,15 @@ namespace segunda
                     cmd.Parameters.AddWithValue("@Contrasena", Contrasena);
 
                     connection.Open();
-                    int count = (int)cmd.ExecuteScalar();
+                    int count = 0;
+
+                    // Manejar el caso donde el ExecuteScalar devuelve null
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        count = (int)result;
+                    }
+
                     connection.Close();
 
                     // Si count es mayor que cero, las credenciales son válidas
@@ -55,6 +71,7 @@ namespace segunda
                 }
             }
         }
+
     }
 
 }
