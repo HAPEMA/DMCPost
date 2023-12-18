@@ -12,7 +12,6 @@
         }
 
         header {
-           
             color: white;
             text-align: left;
             padding: 10px;
@@ -80,27 +79,26 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .titulo{
-            display:flex;
-            justify-content:center;
-            align-content:center;
+
+    .titulo {
+        display: flex;
+        justify-content: center;
+        align-content: center;
             color: #8E44AD
         }
-        .paraformulario{
-            color:#212529;
+
+    .paraformulario {
+        color: #212529;
         }
     </style>
 <body>
-
     <header>
         <div id="logoContainer">
             <img src="IMG/Logo_dmc.png" alt="LogoDMC" />
         </div>
-       
     </header>
 
     <div class="titulo">
-         
                     <h1>Inicio de sesión:</h1>
                 </div>
 
@@ -108,7 +106,7 @@
          <form id="form1" runat="server">
         
          <label for="txtusuario">Usuario:</label>
-         <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control" ></asp:TextBox>
+                <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control"></asp:TextBox>
 
         <label for="txtpassword">Contraseña:</label>
          <asp:TextBox ID="txtContrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
@@ -131,7 +129,7 @@
         return true; // Permite la acción del botón si los campos están llenos
     }
              </script>
-
+            </asp:Login>
         </form>
     </div>
 
