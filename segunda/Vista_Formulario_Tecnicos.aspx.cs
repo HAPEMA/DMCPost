@@ -11,7 +11,7 @@ using iText.Layout.Element;
 
 namespace segunda
 {
-    public partial class WebForm11 : System.Web.UI.Page
+    public partial class WebForm16 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -217,9 +217,9 @@ namespace segunda
                 Session["Responsable"] = responsable;
                 Session["Telefono"] = telefono;
                 Session["Telefonor"] = telefonor;
-            
-            Response.Redirect("Vista_DatosFormulario.aspx");
-        }
+
+                Response.Redirect("WebForm15.aspx");
+            }
             else
             {
                 divMensajeValidacion.InnerText = "No haz guardado el Formulario vuele a intentar.";

@@ -1,7 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Vista_Formulario.aspx.cs" Inherits="segunda.WebForm11" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <style>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Vista_Formulario_Tecnicos.aspx.cs" Inherits="segunda.WebForm16" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+              <style>
   
     body {
         background-color:white;
@@ -163,4 +171,6 @@
 
 
     </div>
-</asp:Content>
+    </form>
+</body>
+</html>

@@ -295,6 +295,9 @@
     <Content Include="Vista_AgregarCliente.aspx" />
     <Content Include="Vista_AgregarTecnico.aspx" />
     <Content Include="Vista_LoginFuera.aspx" />
+    <Content Include="Vista_DatosFormulario.aspx" />
+    <Content Include="Vista_Formulario_Tecnicos.aspx" />
+    <Content Include="WebForm15.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -478,6 +481,27 @@
     </Compile>
     <Compile Include="Vista_LoginFuera.aspx.designer.cs">
       <DependentUpon>Vista_LoginFuera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista_DatosFormulario.aspx.cs">
+      <DependentUpon>Vista_DatosFormulario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista_DatosFormulario.aspx.designer.cs">
+      <DependentUpon>Vista_DatosFormulario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista_Formulario_Tecnicos.aspx.cs">
+      <DependentUpon>Vista_Formulario_Tecnicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista_Formulario_Tecnicos.aspx.designer.cs">
+      <DependentUpon>Vista_Formulario_Tecnicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm15.aspx.cs">
+      <DependentUpon>WebForm15.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm15.aspx.designer.cs">
+      <DependentUpon>WebForm15.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

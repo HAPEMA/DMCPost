@@ -12,8 +12,11 @@ namespace segunda
 {
     public partial class WebForm13 : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        private string userName;
+
+        protected void Login1_LoggedIn(object sender, EventArgs e)
         {
+
             lblMensaje.Text = "";
         }
 
@@ -32,8 +35,8 @@ namespace segunda
             bool UsuarioValido = ValidateCredentials(Usuario, Contrasena);
             if (UsuarioValido)
             {
-                // Si las credenciales son correctas, redirige a la página de inicio
-                Response.Redirect("Default.aspx");
+                // Si las credenciales son correctas, redirige a la página correspondiente
+                RedirectAuthenticatedUser(Usuario);
             }
             else
             {
@@ -41,6 +44,24 @@ namespace segunda
                 lblMensaje.Text = "Nombre de usuario o contraseña incorrectos";
             }
         }
+
+        private void RedirectAuthenticatedUser(string userName)
+        {
+            if (userName.Equals("Harold", StringComparison.OrdinalIgnoreCase))
+            {
+                Response.Redirect("~/Default.aspx");
+            }
+            else if (userName.Equals("vagurto@grupodmc.cl", StringComparison.OrdinalIgnoreCase))
+            {
+                Response.Redirect("~/Vista_Formulario_Tecnicos.aspx");
+            }
+            else
+            {
+                // Manejar el caso en que el usuario no tiene permisos
+                Response.Redirect("~/AccesoDenegado.aspx");
+            }
+        }
+
 
         // Método para validar las credenciales utilizando el procedimiento almacenado
         private bool ValidateCredentials(string Usuario, string Contrasena)
