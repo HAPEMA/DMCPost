@@ -256,11 +256,10 @@ input {
 
 
 
-		<div class="icon-box p-left margin-last">
+<%--		<div class="icon-box p-left margin-last">
 			<div class="icon-wrap">
 			  	<div class="icon-border">
 			    	<div class="icon-content">
-<%--			      		<span class="icon"><img src="http://mmhimages.fnistools.com/images/RECos/1252/img/icon-account.png" /></span> --%>
 			    	</div>
 			  	</div>
 			</div>
