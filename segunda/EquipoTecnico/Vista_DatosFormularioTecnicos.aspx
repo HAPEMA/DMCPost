@@ -1,84 +1,125 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Vista_DatosFormulario.aspx.cs" Inherits="segunda.WebForm14" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <style>
-        body {
-            display: flex;
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Vista_DatosFormularioTecnicos.aspx.cs" Inherits="segunda.EquipoTecnico.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 20px auto;
+        max-width: 800px;
+        background-color: #f4f4f4;
+                    display: flex;
             justify-content: center;
             align-content: center;
             font-family: 'Arial', sans-serif;
             background-color: #f5f5f5;
             color: #333;
-        }
+    }
 
-        .filtro {
-            display: grid;
-            grid-template-columns: repeat(1, 5fr);
-            gap: 8px; /* Ajusta este valor según sea necesario para el espacio entre elementos */
-        }
-        .form-label {
-            display: block;
-            margin-bottom: 8px; /* Ajusta este valor según sea necesario para el espacio entre las etiquetas y los campos de texto */
-        }
-
-        .form-control {
-            width: 100%;
-            box-sizing: border-box;
-            padding: 5px;
-            margin-bottom: 5px; /* Ajusta este valor según sea necesario para el espacio entre los campos de texto */
-        }
-
-        h1 {
-            color: #6a1b9a; /* Morado */
-            text-align: center;
-        }
-
-        p {
-            color: #6a1b9a;
-            text-align: center;
-        }
-
-        hr {
-            border: 1px solid #6a1b9a;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #6a1b9a;
-            text-align: left;
-            padding: 8px;
-            background-color: #fff; /* Blanco */
-        }
-
-        th {
-            background-color: #6a1b9a;
-            color: #fff;
-        }
-
-        input{
-            padding: 5px;
-            margin-bottom: 10px;
-            background-color: #6a1b9a;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-        }
-            select {
-        height: 50px;
-        width: 122px;
+    div {
         background-color: #fff;
-        color: #6a1b9a;
-        border: 1px solid #6a1b9a;
-        border-radius: 5px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #333;
         margin-bottom: 10px;
     }
 
-    </style>
+    p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .filtro {
+        margin-top: 20px;
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 18px;
+    }
+
+    .form-control {
+        width: calc(100% - 24px);
+        padding: 12px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+    }
+
+    hr {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 0;
+        border-top: 2px solid #ccc;
+    }
+
+    #gridContainer {
+        text-align: center;
+    }
+
+    #GridViewServicios {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 16px;
+        margin: 0 auto; /* Centra el elemento horizontalmente */
+    }
+
+    #GridViewServicios th,
+    #GridViewServicios td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    #GridViewServicios th {
+        background-color: #f2f2f2;
+    }
+
+    #GridViewServicios tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    #Button2,
+    #GridViewServicios .editButton,
+    #GridViewServicios .pdfButton {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    #Button2:hover,
+    #GridViewServicios .editButton:hover,
+    #GridViewServicios .pdfButton:hover {
+        background-color: #45a049;
+    }
+</style>
+
+
+
 
     <div>
         <h1>EDITAR si hubo un error y descargar PDF</h1> <!--- Título -->
@@ -192,4 +233,6 @@
 
         </Columns>
     </asp:GridView>
-</asp:Content>
+    </form>
+</body>
+</html>

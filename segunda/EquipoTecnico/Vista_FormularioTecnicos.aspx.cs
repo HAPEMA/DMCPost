@@ -218,7 +218,7 @@ namespace segunda
                 Session["Telefono"] = telefono;
                 Session["Telefonor"] = telefonor;
 
-                Response.Redirect("WebForm15.aspx");
+                Response.Redirect("Vista_DatosFormularioTecnicos.aspx");
             }
             else
             {

@@ -228,6 +228,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EquipoTecnico\Vista_DatosFormularioTecnicos.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="IMG\100_logo.png" />
@@ -286,7 +287,7 @@
     <Content Include="Basura\Vista_Reportes.aspx" />
     <Content Include="GrupoTI\VIsta_EditarServicios.aspx" />
     <Content Include="Basura\Vista_TrabajoClienteBD.aspx" />
-    <Content Include="GrupoTI\Vista_EstadosServicios.aspx" />
+    <Content Include="Basura\Vista_EstadosServicios.aspx" />
     <Content Include="Basura\Vista_TiendaBD.aspx" />
     <Content Include="GrupoTI\Vista_AgregarTienda.aspx" />
     <Content Include="GrupoTI\Vista_Formulario.aspx" />
@@ -296,10 +297,7 @@
     <Content Include="GrupoTI\Vista_AgregarTecnico.aspx" />
     <Content Include="Vista_LoginFuera.aspx" />
     <Content Include="GrupoTI\Vista_DatosFormulario.aspx" />
-    <Content Include="EquipoTecnico\Vista_Formulario_Tecnicos.aspx" />
-    <Content Include="EquipoTecnico\Vista_DatosFormulrioTecnicos.aspx" />
-    <Content Include="WebForm17.aspx" />
-    <Content Include="WebForm18.aspx" />
+    <Content Include="EquipoTecnico\Vista_FormularioTecnicos.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -361,6 +359,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EquipoTecnico\Vista_DatosFormularioTecnicos.aspx.cs">
+      <DependentUpon>Vista_DatosFormularioTecnicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EquipoTecnico\Vista_DatosFormularioTecnicos.aspx.designer.cs">
+      <DependentUpon>Vista_DatosFormularioTecnicos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -421,11 +426,11 @@
     <Compile Include="Basura\Vista_TrabajoClienteBD.aspx.designer.cs">
       <DependentUpon>Vista_TrabajoClienteBD.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GrupoTI\Vista_EstadosServicios.aspx.cs">
+    <Compile Include="Basura\Vista_EstadosServicios.aspx.cs">
       <DependentUpon>Vista_EstadosServicios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GrupoTI\Vista_EstadosServicios.aspx.designer.cs">
+    <Compile Include="Basura\Vista_EstadosServicios.aspx.designer.cs">
       <DependentUpon>Vista_EstadosServicios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Basura\Vista_TiendaBD.aspx.cs">
@@ -491,33 +496,12 @@
     <Compile Include="GrupoTI\Vista_DatosFormulario.aspx.designer.cs">
       <DependentUpon>Vista_DatosFormulario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EquipoTecnico\Vista_Formulario_Tecnicos.aspx.cs">
-      <DependentUpon>Vista_Formulario_Tecnicos.aspx</DependentUpon>
+    <Compile Include="EquipoTecnico\Vista_FormularioTecnicos.aspx.cs">
+      <DependentUpon>Vista_FormularioTecnicos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EquipoTecnico\Vista_Formulario_Tecnicos.aspx.designer.cs">
-      <DependentUpon>Vista_Formulario_Tecnicos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EquipoTecnico\Vista_DatosFormulrioTecnicos.aspx.cs">
-      <DependentUpon>Vista_DatosFormulrioTecnicos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EquipoTecnico\Vista_DatosFormulrioTecnicos.aspx.designer.cs">
-      <DependentUpon>Vista_DatosFormulrioTecnicos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm17.aspx.cs">
-      <DependentUpon>WebForm17.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm17.aspx.designer.cs">
-      <DependentUpon>WebForm17.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm18.aspx.cs">
-      <DependentUpon>WebForm18.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm18.aspx.designer.cs">
-      <DependentUpon>WebForm18.aspx</DependentUpon>
+    <Compile Include="EquipoTecnico\Vista_FormularioTecnicos.aspx.designer.cs">
+      <DependentUpon>Vista_FormularioTecnicos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

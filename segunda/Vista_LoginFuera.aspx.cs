@@ -56,7 +56,7 @@ namespace segunda
             }
             else if (userName.Equals("TecnicosDMC", StringComparison.OrdinalIgnoreCase))
             {
-                Response.Redirect("~/Vista_Formulario_Tecnicos.aspx");
+                Response.Redirect("~/EquipoTecnico/Vista_FormularioTecnicos.aspx");
             }
             else
             {

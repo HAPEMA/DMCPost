@@ -76,6 +76,7 @@
     <h1>Ver Estado de los Servicios</h1>
 
         <div class="mb-3">
+
     <asp:Label ID="labelNombreTecnico" runat="server" Text="Nombre Técnico:" CssClass="form-label"></asp:Label>
     <asp:DropDownList ID="DropDownListNombreTecnico" runat="server" CssClass="form-control" AutoPostBack="true"></asp:DropDownList>
 

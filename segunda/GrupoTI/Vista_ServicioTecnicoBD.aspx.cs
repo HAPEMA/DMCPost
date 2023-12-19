@@ -23,6 +23,7 @@ namespace segunda
             LlenarGridView();
         }
 
+
         protected void ddlCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
             LlenarTiendas();
@@ -55,14 +56,22 @@ namespace segunda
                 using (SqlCommand sql = new SqlCommand("SELECT DISTINCT NombreTecnico FROM Tecnico", sqlConectar))
                 {
                     sql.CommandType = CommandType.Text;
+
+                    // Agregar la opción "Todos"
+                    ListItem itemTodos = new ListItem("Todos", "Todos");
+                    DropDownListNombreTecnico.Items.Add(itemTodos);
+
                     DropDownListNombreTecnico.DataSource = sql.ExecuteReader();
                     DropDownListNombreTecnico.DataTextField = "NombreTecnico";
                     DropDownListNombreTecnico.DataValueField = "NombreTecnico";
                     DropDownListNombreTecnico.DataBind();
-                    DropDownListNombreTecnico.Items.Insert(0, new ListItem("Selecciona Técnico", ""));
+
+                    // Insertar "Selecciona Técnico" al inicio, después de "Todos"
+                    DropDownListNombreTecnico.Items.Insert(1, new ListItem("Selecciona Técnico", ""));
                 }
             }
         }
+
 
         private void LlenarTiendas()
         {
@@ -86,28 +95,21 @@ namespace segunda
 
         private void LlenarGridView()
         {
-            int IdCliente = Convert.ToInt32(ddlCliente.SelectedValue);
-            int IdTienda = Convert.ToInt32(DropDownListTienda.SelectedValue);
-            string estado = DropDownListEstado.SelectedValue;
+            int? IdCliente = (ddlCliente.SelectedValue != "0") ? (int?)Convert.ToInt32(ddlCliente.SelectedValue) : null;
+            int? IdTienda = (DropDownListTienda.SelectedValue != "0") ? (int?)Convert.ToInt32(DropDownListTienda.SelectedValue) : null;
+            string estado = (DropDownListEstado.SelectedValue != "Ambos") ? DropDownListEstado.SelectedValue : null;
+
+            // Obtener el valor seleccionado en DropDownListNombreTecnico
             string nombreTecnico = DropDownListNombreTecnico.SelectedValue;
 
-            DateTime fechaInicio;
-            DateTime fechaFin;
-
-            // Validar las fechas
-            if (!DateTime.TryParse(txtFechaInicio.Text, out fechaInicio))
+            // Ajustar la lógica para manejar la opción "Todos"
+            if (nombreTecnico == "Todos")
             {
-                // Manejar el caso en que la fecha de inicio no sea válida
-                // Puedes mostrar un mensaje al usuario o realizar otra acción apropiada.
-                return;
+                nombreTecnico = null; // Dejarlo como null para incluir todos los técnicos
             }
 
-            if (!DateTime.TryParse(txtFechaFin.Text, out fechaFin))
-            {
-                // Manejar el caso en que la fecha de fin no sea válida
-                // Puedes mostrar un mensaje al usuario o realizar otra acción apropiada.
-                return;
-            }
+            DateTime? fechaInicio = (string.IsNullOrEmpty(txtFechaInicio.Text)) ? (DateTime?)null : Convert.ToDateTime(txtFechaInicio.Text);
+            DateTime? fechaFin = (string.IsNullOrEmpty(txtFechaFin.Text)) ? (DateTime?)null : Convert.ToDateTime(txtFechaFin.Text);
 
             string conectar = ConfigurationManager.ConnectionStrings["conexion"].ConnectionString;
             using (SqlConnection sqlConectar = new SqlConnection(conectar))

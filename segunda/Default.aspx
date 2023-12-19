@@ -271,7 +271,7 @@ input {
                 
                 <asp:Button runat="server" OnClick="EstadoServicios_Click" Text="Ir" /> 
 			</div>
-		</div>
+		</div>--%>
 
 
 
