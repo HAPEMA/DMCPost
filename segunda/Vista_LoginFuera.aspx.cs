@@ -12,13 +12,16 @@ namespace segunda
 {
     public partial class WebForm13 : System.Web.UI.Page
     {
-        private string userName;
 
         protected void Login1_LoggedIn(object sender, EventArgs e)
         {
 
             lblMensaje.Text = "";
         }
+
+
+
+
 
         protected void BtnLogin_Click(object sender, EventArgs e)
         {
@@ -47,20 +50,32 @@ namespace segunda
 
         private void RedirectAuthenticatedUser(string userName)
         {
-            if (userName.Equals("Harold", StringComparison.OrdinalIgnoreCase))
+            if (userName.Equals("12", StringComparison.OrdinalIgnoreCase))
             {
                 Response.Redirect("~/Default.aspx");
             }
-            else if (userName.Equals("vagurto@grupodmc.cl", StringComparison.OrdinalIgnoreCase))
+            else if (userName.Equals("TecnicosDMC", StringComparison.OrdinalIgnoreCase))
             {
                 Response.Redirect("~/Vista_Formulario_Tecnicos.aspx");
             }
             else
             {
                 // Manejar el caso en que el usuario no tiene permisos
-                Response.Redirect("~/AccesoDenegado.aspx");
+                Response.Redirect("~/Vista_LoginFuera.aspx");
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         // Método para validar las credenciales utilizando el procedimiento almacenado

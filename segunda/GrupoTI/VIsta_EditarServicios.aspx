@@ -14,7 +14,7 @@
 
         .filtro {
             display: grid;
-            grid-template-columns: repeat(4, 5fr);
+            grid-template-columns: repeat(1, 5fr);
             gap: 8px; /* Ajusta este valor según sea necesario para el espacio entre elementos */
         }
         .form-label {
@@ -92,66 +92,60 @@
         <!-- Otros controles de filtro -->
 
         <!-- Controles de edición -->
+
+        
+          <asp:Label ID="tecnico" runat="server" Text="Nombre Técnico:" CssClass="form-label" ></asp:Label>
+        <asp:DropDownList ID="vertecnico" runat="server" CssClass="form-label" AutoPostBack="true" Width="360px" ></asp:DropDownList>
+
+
+               <asp:Label ID="cliente" runat="server" Text="Cliente:" CssClass="form-label" ></asp:Label>
+<asp:DropDownList ID="vercliente" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="unnobrecualquierasoloquieroacabar" ></asp:DropDownList>
+
+
+        <asp:Label ID="tienda" runat="server" Text="Tienda:" CssClass="form-label"></asp:Label>
+<asp:DropDownList ID="vertienda" runat="server" CssClass="form-control" AutoPostBack="true" ></asp:DropDownList>
+
+
+           <asp:Label ID="telefono1" runat="server" Text="Telefono:" CssClass="form-label"></asp:Label>
+           <%-- El input de Telefono 1  --%>
+   <asp:TextBox ID="vertelefono1" runat="server" CssClass="form-control" placeholder="Ingresar N° de Telefono" ></asp:TextBox>
+
+          <asp:Label ID="correo" runat="server" Text="Correo:" CssClass="form-label"></asp:Label>
+          <%-- El input de correo  --%>
+  <asp:TextBox ID="vercorreo" runat="server" CssClass="form-control" type="email" placeholder="Ingresar  Correo Electronico" ></asp:TextBox>
+
+          <asp:Label ID="fechaa" runat="server" Text="Fecha:" CssClass="form-label"></asp:Label>
+  <asp:TextBox ID="verfechaa" runat="server" CssClass="form-control" type="Date" ></asp:TextBox>
+
+
         <asp:Label ID="motivo" runat="server" Text="Motivo:" CssClass="form-label"></asp:Label>
             <%-- El input de Motivo  --%>
         <asp:TextBox ID="vermotivo" runat="server" CssClass="form-control" placeholder="Ingresar el Motivo de la Visita" ></asp:TextBox>
 
-
-
-       <asp:Label ID="cliente" runat="server" Text="Cliente:" CssClass="form-label"></asp:Label>
-<asp:DropDownList ID="vercliente" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="unnobrecualquierasoloquieroacabar"></asp:DropDownList>
-
-
-
 <asp:Label ID="tipoTrabajo" runat="server" Text="Tipo de Trabajo:" CssClass="form-label"></asp:Label>
-<asp:DropDownList ID="TextBox1" runat="server" CssClass="form-control" ></asp:DropDownList>
+<asp:DropDownList ID="TextBox1" runat="server" CssClass="form-control"  ></asp:DropDownList>
 
-
-
-<asp:Label ID="tienda" runat="server" Text="Tienda:" CssClass="form-label"></asp:Label>
-<asp:DropDownList ID="vertienda" runat="server" CssClass="form-control" AutoPostBack="true" ></asp:DropDownList>
-
-
-
+             <asp:Label ID="estatus" runat="server" Text="Estatus:" CssClass="form-label"></asp:Label>
+<asp:DropDownList ID="verestatus" runat="server" CssClass="form-control">
+</asp:DropDownList>
 
         <asp:Label ID="descripcion" runat="server" Text="Descripcion:" CssClass="form-label"></asp:Label>
             <%-- El input de Descripcion --%>
         <asp:TextBox ID="verdescripcion" runat="server" CssClass="form-control" placeholder="Ingresar la Descripcion" TextMode="MultiLine" Rows="2" ></asp:TextBox>
 
-     
-
-          <asp:Label ID="tecnico" runat="server" Text="Nombre Técnico:" CssClass="form-label"></asp:Label>
-        <asp:DropDownList ID="vertecnico" runat="server" CssClass="form-label" AutoPostBack="true" Width="360px"></asp:DropDownList>
-
-
-     <asp:Label ID="estatus" runat="server" Text="Estatus:" CssClass="form-label"></asp:Label>
-<asp:DropDownList ID="verestatus" runat="server" CssClass="form-control">
-</asp:DropDownList>
-
-
-
-        <asp:Label ID="telefono1" runat="server" Text="Telefono 1:" CssClass="form-label"></asp:Label>
-                <%-- El input de Telefono 1  --%>
-        <asp:TextBox ID="vertelefono1" runat="server" CssClass="form-control" placeholder="Ingresar N° de Telefono" ></asp:TextBox>
-
-        <asp:Label ID="fechaa" runat="server" Text="Fecha:" CssClass="form-label"></asp:Label>
-        <asp:TextBox ID="verfechaa" runat="server" CssClass="form-control" type="Date" ></asp:TextBox>
-
+      
         <asp:Label ID="responsable" runat="server" Text="Responsable:" CssClass="form-label"></asp:Label>
              <%-- El input de Responsable  --%>
         <asp:TextBox ID="verresponsable" runat="server" CssClass="form-control" placeholder="Ingresar el Responsabre"></asp:TextBox>
 
-        <asp:Label ID="correo" runat="server" Text="Correo:" CssClass="form-label"></asp:Label>
-                <%-- El input de correo  --%>
-        <asp:TextBox ID="vercorreo" runat="server" CssClass="form-control" type="email" placeholder="Ingresar  Correo Electronico" ></asp:TextBox>
-
-        <asp:Label ID="telefono2" runat="server" Text="Telefono 2:" CssClass="form-label"></asp:Label>
+      
+        <asp:Label ID="telefono2" runat="server" Text="Celular:" CssClass="form-label"></asp:Label>
             <%-- El input de Telefono 2  --%>
         <asp:TextBox ID="vertelefono2" runat="server" CssClass="form-control"  placeholder="Ingresar N° del Responsable" ></asp:TextBox>
 
-        <asp:Label ID="idservicio" runat="server" Text="ID:" CssClass="form-label" Visible="False"></asp:Label>
+        <asp:Label ID="idservicio" runat="server" Text="ID:" CssClass="form-label" Visible="False" ></asp:Label>
             <%-- El input de ID  --%>
-        <asp:TextBox ID="veridservicio" runat="server" CssClass="form-control" Visible="False"></asp:TextBox>
+        <asp:TextBox ID="veridservicio" runat="server" CssClass="form-control" Visible="False" ></asp:TextBox>
 
     </div>
     <hr />
@@ -174,18 +168,18 @@
         <Columns>
            
             <asp:BoundField DataField="id_Servicios" HeaderText="#" />
+            <asp:BoundField DataField="NombreCliente" HeaderText=" Cliente" />
+            <asp:BoundField DataField="NombreTienda" HeaderText="Tienda" />
+            <asp:BoundField DataField="NombreTecnico" HeaderText="Tecnico" />
+            <asp:BoundField DataField="Telefono1" HeaderText="Teléfono" />
+            <asp:BoundField DataField="Correo" HeaderText="Correo" />
+            <asp:BoundField DataField="Fecha" HeaderText="Fecha" />
             <asp:BoundField DataField="Motivo" HeaderText="Motivo" />
             <asp:BoundField DataField="TipoTrabajo" HeaderText="Tipo de Trabajo" />
-            <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
-            <asp:BoundField DataField="NombreTienda" HeaderText="Nombre Tienda" />
-            <asp:BoundField DataField="NombreTecnico" HeaderText="Nombre Tecnico" />
-            <asp:BoundField DataField="NombreCliente" HeaderText="Nombre Cliente" />
             <asp:BoundField DataField="Estatus" HeaderText="Estatus" />
-            <asp:BoundField DataField="Fecha" HeaderText="Fecha" />
+            <asp:BoundField DataField="Descripcion" HeaderText="Observacion" />
             <asp:BoundField DataField="Responsable" HeaderText="Responsable" />
-            <asp:BoundField DataField="Correo" HeaderText="Correo" />
-            <asp:BoundField DataField="Telefono1" HeaderText="Teléfono 1" />
-            <asp:BoundField DataField="Telefono2" HeaderText="Teléfono 2" />
+            <asp:BoundField DataField="Telefono2" HeaderText="Celular" />
 
           <asp:TemplateField HeaderText="ACTUALIZAR">
                 <ItemTemplate>

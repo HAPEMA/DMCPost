@@ -186,8 +186,7 @@ namespace segunda
                 }
             }
         }
-
-
+            
         protected void btnPDF_Click(object sender, EventArgs e)
         {
             if (Session["DatosGuardados"] != null && (bool)Session["DatosGuardados"])

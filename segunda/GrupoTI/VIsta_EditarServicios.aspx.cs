@@ -93,22 +93,47 @@ namespace segunda
 
                 // Obtén el ID de la fila seleccionada y guárdalo en la variable de sesión
                 veridservicio.Text = selectedRow.Cells[0].Text;
-                vermotivo.Text = selectedRow.Cells[1].Text;
-                vertelefono1.Text = selectedRow.Cells[11].Text;
+                vertecnico.Text = selectedRow.Cells[3].Text;
+                string clienteValue = selectedRow.Cells[1].Text;
+                // Limpia las selecciones existentes antes de seleccionar el nuevo valor
+                vercliente.ClearSelection();
+                // Intenta seleccionar el nuevo valor
+                ListItem clienteItem = vercliente.Items.FindByText(clienteValue);
+                if (clienteItem != null)
+                {
+                    clienteItem.Selected = true;
+                }
+
+                string tiendaValue = selectedRow.Cells[2].Text;
+                // Limpia las selecciones existentes antes de seleccionar el nuevo valor
+                vertienda.ClearSelection();
+                // Intenta seleccionar el nuevo valor
+                ListItem tiendaItem = vertienda.Items.FindByText(tiendaValue);
+                if (tiendaItem != null)
+                {
+                    tiendaItem.Selected = true;
+                }
+                vertelefono1.Text = selectedRow.Cells[4].Text;
+                vercorreo.Text = selectedRow.Cells[5].Text;
+                verfechaa.Text = selectedRow.Cells[6].Text;
+                vermotivo.Text = selectedRow.Cells[7].Text;
+                TextBox1.SelectedValue = selectedRow.Cells[8].Text;
+
+                string estatusValue = selectedRow.Cells[9].Text;
+                verdescripcion.Text = selectedRow.Cells[10].Text;
+                verresponsable.Text = selectedRow.Cells[11].Text;
+
                 vertelefono2.Text = selectedRow.Cells[12].Text;
-                verfechaa.Text = selectedRow.Cells[8].Text;
-                vercorreo.Text = selectedRow.Cells[10].Text;
-                vertecnico.Text = selectedRow.Cells[5].Text;
+
+
                 // Ajusta según el valor esperado
-                TextBox1.SelectedValue = selectedRow.Cells[2].Text;
+
 
 
                 // Ajusta el índice según la posición de las columnas
-                verresponsable.Text = selectedRow.Cells[9].Text;
-                verdescripcion.Text = selectedRow.Cells[3].Text;
+
 
                 // Selecciona el valor en el DropDownList estatus
-                string estatusValue = selectedRow.Cells[7].Text;
                 // Limpia las selecciones existentes antes de seleccionar el nuevo valor
                 verestatus.ClearSelection();
                 // Intenta seleccionar el nuevo valor
@@ -119,29 +144,13 @@ namespace segunda
                 }
 
                 // Selecciona el valor en el DropDownList cliente
-                string clienteValue = selectedRow.Cells[6].Text;
-                // Limpia las selecciones existentes antes de seleccionar el nuevo valor
-                vercliente.ClearSelection();
-                // Intenta seleccionar el nuevo valor
-                ListItem clienteItem = vercliente.Items.FindByText(clienteValue);
-                if (clienteItem != null)
-                {
-                    clienteItem.Selected = true;
-                }
+              
 
                 // Llena las tiendas de acuerdo al cliente seleccionado
                 LlenarTiendas2();
 
                 // Selecciona el valor en el DropDownList tienda
-                string tiendaValue = selectedRow.Cells[4].Text;
-                // Limpia las selecciones existentes antes de seleccionar el nuevo valor
-                vertienda.ClearSelection();
-                // Intenta seleccionar el nuevo valor
-                ListItem tiendaItem = vertienda.Items.FindByText(tiendaValue);
-                if (tiendaItem != null)
-                {
-                    tiendaItem.Selected = true;
-                }
+             
             }
         }
         protected void btnEnviar_Click(object sender, EventArgs e)

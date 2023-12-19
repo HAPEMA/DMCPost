@@ -18,20 +18,23 @@ namespace segunda
 
         protected void Formulario(object sender, EventArgs e)
         {
-            Response.Redirect("Vista_Formulario.aspx");
+            Response.Redirect("~/GrupoTI/Vista_Formulario.aspx");
         }
 
         protected void EstadoServicios_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Vista_EstadosServicios.aspx");
+         Response.Redirect("~/GrupoTI/Vista_EstadosServicios.aspx");
+
         }
         protected void EstadoServicioTecnico(object sender, EventArgs e)
         {
-            Response.Redirect("Vista_ServicioTecnicoBD.aspx");
+         Response.Redirect("~/GrupoTI/Vista_ServicioTecnicoBD.aspx");
+
         }
         protected void EditarServicios(object sender, EventArgs e)
         {
-            Response.Redirect("Vista_EditarServicios.aspx");
+         Response.Redirect("~/GrupoTI/Vista_EditarServicios.aspx");
+
         }
     }
 }

@@ -208,8 +208,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Basura\About.aspx" />
+    <Content Include="Basura\Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -281,23 +281,25 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Vista_Login.aspx" />
-    <Content Include="Vista_AntesLogin.aspx" />
-    <Content Include="Vista_Reportes.aspx" />
-    <Content Include="VIsta_EditarServicios.aspx" />
-    <Content Include="Vista_TrabajoClienteBD.aspx" />
-    <Content Include="Vista_EstadosServicios.aspx" />
-    <Content Include="Vista_TiendaBD.aspx" />
-    <Content Include="Vista_AgregarTienda.aspx" />
-    <Content Include="Vista_Formulario.aspx" />
-    <Content Include="Vista_EnviarCorreo.aspx" />
-    <Content Include="Vista_ServicioTecnicoBD.aspx" />
-    <Content Include="Vista_AgregarCliente.aspx" />
-    <Content Include="Vista_AgregarTecnico.aspx" />
+    <Content Include="Basura\Vista_Login.aspx" />
+    <Content Include="Basura\Vista_AntesLogin.aspx" />
+    <Content Include="Basura\Vista_Reportes.aspx" />
+    <Content Include="GrupoTI\VIsta_EditarServicios.aspx" />
+    <Content Include="Basura\Vista_TrabajoClienteBD.aspx" />
+    <Content Include="GrupoTI\Vista_EstadosServicios.aspx" />
+    <Content Include="Basura\Vista_TiendaBD.aspx" />
+    <Content Include="GrupoTI\Vista_AgregarTienda.aspx" />
+    <Content Include="GrupoTI\Vista_Formulario.aspx" />
+    <Content Include="Basura\Vista_EnviarCorreo.aspx" />
+    <Content Include="GrupoTI\Vista_ServicioTecnicoBD.aspx" />
+    <Content Include="GrupoTI\Vista_AgregarCliente.aspx" />
+    <Content Include="GrupoTI\Vista_AgregarTecnico.aspx" />
     <Content Include="Vista_LoginFuera.aspx" />
-    <Content Include="Vista_DatosFormulario.aspx" />
-    <Content Include="Vista_Formulario_Tecnicos.aspx" />
-    <Content Include="WebForm15.aspx" />
+    <Content Include="GrupoTI\Vista_DatosFormulario.aspx" />
+    <Content Include="EquipoTecnico\Vista_Formulario_Tecnicos.aspx" />
+    <Content Include="EquipoTecnico\Vista_DatosFormulrioTecnicos.aspx" />
+    <Content Include="WebForm17.aspx" />
+    <Content Include="WebForm18.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -337,19 +339,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
+    <Compile Include="Basura\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
+    <Compile Include="Basura\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
+    <Compile Include="Basura\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
+    <Compile Include="Basura\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -384,95 +386,95 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_Login.aspx.cs">
+    <Compile Include="Basura\Vista_Login.aspx.cs">
       <DependentUpon>Vista_Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_Login.aspx.designer.cs">
+    <Compile Include="Basura\Vista_Login.aspx.designer.cs">
       <DependentUpon>Vista_Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_AntesLogin.aspx.cs">
+    <Compile Include="Basura\Vista_AntesLogin.aspx.cs">
       <DependentUpon>Vista_AntesLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_AntesLogin.aspx.designer.cs">
+    <Compile Include="Basura\Vista_AntesLogin.aspx.designer.cs">
       <DependentUpon>Vista_AntesLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_Reportes.aspx.cs">
+    <Compile Include="Basura\Vista_Reportes.aspx.cs">
       <DependentUpon>Vista_Reportes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_Reportes.aspx.designer.cs">
+    <Compile Include="Basura\Vista_Reportes.aspx.designer.cs">
       <DependentUpon>Vista_Reportes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="VIsta_EditarServicios.aspx.cs">
+    <Compile Include="GrupoTI\VIsta_EditarServicios.aspx.cs">
       <DependentUpon>VIsta_EditarServicios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="VIsta_EditarServicios.aspx.designer.cs">
+    <Compile Include="GrupoTI\VIsta_EditarServicios.aspx.designer.cs">
       <DependentUpon>VIsta_EditarServicios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_TrabajoClienteBD.aspx.cs">
+    <Compile Include="Basura\Vista_TrabajoClienteBD.aspx.cs">
       <DependentUpon>Vista_TrabajoClienteBD.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_TrabajoClienteBD.aspx.designer.cs">
+    <Compile Include="Basura\Vista_TrabajoClienteBD.aspx.designer.cs">
       <DependentUpon>Vista_TrabajoClienteBD.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_EstadosServicios.aspx.cs">
+    <Compile Include="GrupoTI\Vista_EstadosServicios.aspx.cs">
       <DependentUpon>Vista_EstadosServicios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_EstadosServicios.aspx.designer.cs">
+    <Compile Include="GrupoTI\Vista_EstadosServicios.aspx.designer.cs">
       <DependentUpon>Vista_EstadosServicios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_TiendaBD.aspx.cs">
+    <Compile Include="Basura\Vista_TiendaBD.aspx.cs">
       <DependentUpon>Vista_TiendaBD.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_TiendaBD.aspx.designer.cs">
+    <Compile Include="Basura\Vista_TiendaBD.aspx.designer.cs">
       <DependentUpon>Vista_TiendaBD.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_AgregarTienda.aspx.cs">
+    <Compile Include="GrupoTI\Vista_AgregarTienda.aspx.cs">
       <DependentUpon>Vista_AgregarTienda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_AgregarTienda.aspx.designer.cs">
+    <Compile Include="GrupoTI\Vista_AgregarTienda.aspx.designer.cs">
       <DependentUpon>Vista_AgregarTienda.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_Formulario.aspx.cs">
+    <Compile Include="GrupoTI\Vista_Formulario.aspx.cs">
       <DependentUpon>Vista_Formulario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_Formulario.aspx.designer.cs">
+    <Compile Include="GrupoTI\Vista_Formulario.aspx.designer.cs">
       <DependentUpon>Vista_Formulario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_EnviarCorreo.aspx.cs">
+    <Compile Include="Basura\Vista_EnviarCorreo.aspx.cs">
       <DependentUpon>Vista_EnviarCorreo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_EnviarCorreo.aspx.designer.cs">
+    <Compile Include="Basura\Vista_EnviarCorreo.aspx.designer.cs">
       <DependentUpon>Vista_EnviarCorreo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_ServicioTecnicoBD.aspx.cs">
+    <Compile Include="GrupoTI\Vista_ServicioTecnicoBD.aspx.cs">
       <DependentUpon>Vista_ServicioTecnicoBD.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_ServicioTecnicoBD.aspx.designer.cs">
+    <Compile Include="GrupoTI\Vista_ServicioTecnicoBD.aspx.designer.cs">
       <DependentUpon>Vista_ServicioTecnicoBD.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_AgregarCliente.aspx.cs">
+    <Compile Include="GrupoTI\Vista_AgregarCliente.aspx.cs">
       <DependentUpon>Vista_AgregarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_AgregarCliente.aspx.designer.cs">
+    <Compile Include="GrupoTI\Vista_AgregarCliente.aspx.designer.cs">
       <DependentUpon>Vista_AgregarCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_AgregarTecnico.aspx.cs">
+    <Compile Include="GrupoTI\Vista_AgregarTecnico.aspx.cs">
       <DependentUpon>Vista_AgregarTecnico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_AgregarTecnico.aspx.designer.cs">
+    <Compile Include="GrupoTI\Vista_AgregarTecnico.aspx.designer.cs">
       <DependentUpon>Vista_AgregarTecnico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vista_LoginFuera.aspx.cs">
@@ -482,26 +484,40 @@
     <Compile Include="Vista_LoginFuera.aspx.designer.cs">
       <DependentUpon>Vista_LoginFuera.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_DatosFormulario.aspx.cs">
+    <Compile Include="GrupoTI\Vista_DatosFormulario.aspx.cs">
       <DependentUpon>Vista_DatosFormulario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_DatosFormulario.aspx.designer.cs">
+    <Compile Include="GrupoTI\Vista_DatosFormulario.aspx.designer.cs">
       <DependentUpon>Vista_DatosFormulario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vista_Formulario_Tecnicos.aspx.cs">
+    <Compile Include="EquipoTecnico\Vista_Formulario_Tecnicos.aspx.cs">
       <DependentUpon>Vista_Formulario_Tecnicos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vista_Formulario_Tecnicos.aspx.designer.cs">
+    <Compile Include="EquipoTecnico\Vista_Formulario_Tecnicos.aspx.designer.cs">
       <DependentUpon>Vista_Formulario_Tecnicos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm15.aspx.cs">
-      <DependentUpon>WebForm15.aspx</DependentUpon>
+    <Compile Include="EquipoTecnico\Vista_DatosFormulrioTecnicos.aspx.cs">
+      <DependentUpon>Vista_DatosFormulrioTecnicos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm15.aspx.designer.cs">
-      <DependentUpon>WebForm15.aspx</DependentUpon>
+    <Compile Include="EquipoTecnico\Vista_DatosFormulrioTecnicos.aspx.designer.cs">
+      <DependentUpon>Vista_DatosFormulrioTecnicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm17.aspx.cs">
+      <DependentUpon>WebForm17.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm17.aspx.designer.cs">
+      <DependentUpon>WebForm17.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm18.aspx.cs">
+      <DependentUpon>WebForm18.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm18.aspx.designer.cs">
+      <DependentUpon>WebForm18.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -61,7 +61,7 @@
 
 
         <div class="mb-3">
-<asp:ImageButton ID="ImageButton1" ImageUrl="IMG/hahah.png" runat="server" OnClick="CrearTecnico_Click" Width="20px"></asp:ImageButton>
+<asp:ImageButton ID="ImageButton1" ImageUrl="../IMG/hahah.png" runat="server" OnClick="CrearTecnico_Click" Width="20px"></asp:ImageButton>
     <asp:Label ID="tecnico" runat="server" Text="Técnico:" CssClass="form-label"></asp:Label>
     <asp:DropDownList ID="DropDownListtxttecnico" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlCliente_SelectedIndexChanged"></asp:DropDownList>
     <%-- El input de cliente  --%>
@@ -70,7 +70,7 @@
 
         <div class="mb-3">
             <asp:Label ID="list" runat="server" Text="Cliente:" CssClass="form-label"></asp:Label>
-             <asp:ImageButton ID="ImageButton2" ImageUrl="IMG/jeje.png" runat="server" OnClick="CrearTienda_Click2" Width="30px"></asp:ImageButton>
+             <asp:ImageButton ID="ImageButton2" ImageUrl="../IMG/jeje.png" runat="server" OnClick="CrearTienda_Click2" Width="30px"></asp:ImageButton>
             <asp:DropDownList ID="ddlCliente" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlCliente_SelectedIndexChanged"></asp:DropDownList>
             <%-- El input de cliente  --%>
         </div>
@@ -80,7 +80,7 @@
         <div class="mb-3">
             <asp:Label ID="tiendaa" runat="server" Text="Tienda:" CssClass="form-label"></asp:Label>
        
-             <asp:ImageButton ID="CrearTienda" ImageUrl="IMG/aja.png" runat="server" OnClick="CrearTienda_Click" Width="20px"></asp:ImageButton>
+             <asp:ImageButton ID="CrearTienda" ImageUrl="../IMG/aja.png" runat="server" OnClick="CrearTienda_Click" Width="20px"></asp:ImageButton>
             <%-- El input de tienda  --%>
             <asp:DropDownList ID="ddlTienda" runat="server" CssClass="form-control" AutoPostBack="true"></asp:DropDownList>
         </div>
@@ -138,7 +138,7 @@
 
     
 <div class="mb-3">
-    <asp:Label ID="descripcion" runat="server" Text="Descripción:" CssClass="form-label"></asp:Label>
+    <asp:Label ID="descripcion" runat="server" Text="Observacion:" CssClass="form-label"></asp:Label>
     <asp:TextBox ID="txtdescripcion" runat="server" CssClass="form-control" placeholder="Ingresar la Descripcion" TextMode="MultiLine" Rows="3"></asp:TextBox>
     <%--input de descripcion--%>
 </div>
@@ -151,7 +151,7 @@
 
        
                 <div class="mb-3">
-            <asp:Label ID="telefonor" runat="server" Text="Teléfono Responsable:" CssClass="form-label"></asp:Label>
+            <asp:Label ID="telefonor" runat="server" Text="Celular:" CssClass="form-label"></asp:Label>
             <%--input del telefonor --%>
             <asp:TextBox ID="txttelefonor" runat="server" CssClass="form-control" placeholder="Ingresar N° del Responsable" ></asp:TextBox>
         </div>
